@@ -5,11 +5,11 @@ const Home = () => {
   return (
     <main className="home">
       <div className="home-main">
-        <h3>Web Developer & Designer</h3>
+        <h3 className="home-heading">Web Developer & Designer</h3>
         <Link to="/About">
-          <h3>About</h3>
+          <h3 className="home-about-link">About</h3>
         </Link>
-        <h1>Deshan Mclachlan</h1>
+        <h1 className="home-name">Deshan Mclachlan</h1>
       </div>
       <div className="home-projects">
         <Projects />
