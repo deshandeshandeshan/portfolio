@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import "./Project.css";
 
-const Project = ({ image, imageKey, name, yearCompleted, description }) => {
+const Project = ({
+  image,
+  imageKey,
+  name,
+  yearCompleted,
+  description,
+  role,
+  credits,
+  visit,
+  visitLink,
+}) => {
   const [open, setOpen] = useState(false);
 
   return (
@@ -35,6 +45,9 @@ const Project = ({ image, imageKey, name, yearCompleted, description }) => {
         <h2>{name}</h2>
         <p>{yearCompleted}</p>
         <p>{description}</p>
+        <p>{role}</p>
+        <p>{credits}</p>
+        <a href={visitLink}>{visit}</a>
         <img src={`${image}`} alt={name} key={imageKey} />
       </div>
     </li>

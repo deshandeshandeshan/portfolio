@@ -13,6 +13,10 @@ const Projects = () => {
             name={project.name}
             description={project.description}
             yearCompleted={project.yearCompleted}
+            role={project.role}
+            credits={project.credits}
+            visit={project.visit}
+            visitLink={project.visitLink}
           />
         );
       })}

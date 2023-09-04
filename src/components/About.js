@@ -24,9 +24,7 @@ const About = () => {
           </a>
         </li>
         <li>
-          <a href="https://nz.linkedin.com/in/deshan-mclachlan-13b561152">
-            Instagram
-          </a>
+          <a href="https://www.instagram.com/deshhan/">Instagram</a>
         </li>
         <li>
           <a href="mailto:deshan.mclachlan0@gmail.com">hello@deshan.co.nz</a>
