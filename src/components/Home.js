@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Projects from "./Projects";
 
 const Home = () => {
   return (
@@ -10,7 +11,9 @@ const Home = () => {
         </Link>
         <h1>Deshan Mclachlan</h1>
       </div>
-      <div className="home-projects"></div>
+      <div className="home-projects">
+        <Projects />
+      </div>
     </main>
   );
 };
