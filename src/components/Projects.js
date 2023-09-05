@@ -3,7 +3,7 @@ import projects from "../projects-data/projectsdata";
 
 const Projects = () => {
   return (
-    <ul>
+    <ul className="projects-list">
       {projects.map((project) => {
         return (
           <Project
