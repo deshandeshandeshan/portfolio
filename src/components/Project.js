@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Project.css";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const Project = ({
   image,
@@ -15,17 +17,17 @@ const Project = ({
   const [open, setOpen] = useState(false);
 
   return (
-    <li className="project">
-      <h2 className="project-title">{name}</h2>
-      <p className="project-year-completed">{yearCompleted}</p>
-      <p className="project-description">{description}</p>
+    <li className="project project-spacing">
+      <h2 className="project-title project-padding">{name}</h2>
+      <p className="project-year-completed project-padding">{yearCompleted}</p>
+      <p className="project-description project-padding">{description}</p>
       <p
-        className="project-view-more"
+        className="project-view-more project-padding"
         onClick={() => {
           setOpen(!open);
         }}
       >
-        View more
+        View more <FaLongArrowAltRight />
       </p>
       <img
         className="project-hero-image"
@@ -47,18 +49,22 @@ const Project = ({
             setOpen(!open);
           }}
         >
-          Back
+          <FaLongArrowAltLeft /> Back
         </p>
-        <h2 className="project-overlay-name">{name}</h2>
-        <p className="project-overlay-year-completed">{yearCompleted}</p>
-        <p className="project-overlay-description">{description}</p>
-        <p className="project-overlay-role">{role}</p>
-        <p className="project-overlay-credits">{credits}</p>
-        <a className="project-overlay-visit" href={visitLink}>
-          {visit}
+        <h2 className="project-overlay-title project-padding">{name}</h2>
+        <p className="project-overlay-year-completed project-padding">
+          {yearCompleted}
+        </p>
+        <p className="project-overlay-description project-padding">
+          {description}
+        </p>
+        <p className="project-overlay-role project-padding">{role}</p>
+        <p className="project-overlay-credits project-padding">{credits}</p>
+        <a className="project-overlay-visit project-padding" href={visitLink}>
+          {visit} <FaLongArrowAltRight />
         </a>
         <img
-          className="project-overlay-image"
+          className="project-overlay-image project-padding"
           src={`${image}`}
           alt={name}
           key={imageKey}

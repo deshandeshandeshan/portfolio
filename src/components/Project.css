@@ -1,3 +1,41 @@
+.project {
+  padding: 0 2rem;
+}
+
+.project-title,
+.project-overlay-title {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.project-overlay-year-completed,
+.project-year-completed {
+  color: #5a5a5a;
+}
+
+.project-padding {
+  padding-bottom: 1rem;
+}
+
+.project-spacing {
+  padding-bottom: 8rem;
+}
+
+.project-back-button,
+.project-view-more {
+  color: #0000ff;
+}
+
+/* project overlay code below */
+
+.project-back-button {
+  padding-bottom: 4rem;
+}
+
+.project-overlay-visit {
+  font-size: 20px;
+}
+
 .project-overlay {
   top: 0;
   position: fixed;

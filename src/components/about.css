@@ -1,0 +1,27 @@
+.about {
+  padding: 2rem 2rem;
+}
+
+.about-intro {
+  font-family: neue-haas-grotesk-text, sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.about-selected-works-link {
+  padding-bottom: 4rem;
+}
+
+.about-padding,
+.about-section-padding {
+  padding-bottom: 2rem;
+}
+
+.about-link {
+  padding-bottom: 0.3rem;
+}
+
+a.link-color {
+  color: #0000ff;
+}
