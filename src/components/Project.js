@@ -35,6 +35,12 @@ const Project = ({
         alt={name}
         key={imageKey}
       />
+      <img
+        className="project-hero-image-2"
+        src={`${image}`}
+        alt={name}
+        key={imageKey}
+      />
       <div
         className={`project-overlay ${
           open ? "project-overlay--active" : "project-overlay--hidden"
@@ -63,12 +69,14 @@ const Project = ({
         <a className="project-overlay-visit project-padding" href={visitLink}>
           {visit} <FaLongArrowAltRight />
         </a>
-        <img
-          className="project-overlay-image project-padding"
-          src={`${image}`}
-          alt={name}
-          key={imageKey}
-        />
+        <div className="project-overlay-images project-padding-top">
+          <img
+            className="project-overlay-image"
+            src={`${image}`}
+            alt={name}
+            key={imageKey}
+          />
+        </div>
       </div>
     </li>
   );

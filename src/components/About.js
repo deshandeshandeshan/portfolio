@@ -6,8 +6,8 @@ import "./about.css";
 const About = () => {
   return (
     <main className="about">
-      <Link to="/">
-        <h3 className="about-selected-works-link">
+      <Link to="/" className="about-selected-works-link">
+        <h3 className="about-selected-works">
           Selected works <FaLongArrowAltRight />
         </h3>
       </Link>

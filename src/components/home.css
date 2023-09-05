@@ -1,5 +1,5 @@
 .home-name {
-  font-size: 4rem;
+  font-size: 12vw;
 }
 
 .home-main-grid {
@@ -16,8 +16,8 @@
 }
 
 .home-about-link {
-  grid-column: 3 / 5;
-  grid-row: 2 / 3;
+  grid-column: 4 / 5;
+  grid-row: 1 / 2;
 }
 
 .home-name {
@@ -25,4 +25,38 @@
   grid-column: 1 / 5;
   grid-row: 3 / 4;
   align-self: end;
+}
+
+@media only screen and (min-width: 50rem) {
+  .home-name {
+    font-size: 10vw;
+  }
+
+  .home-main-grid {
+    grid-template-columns: repeat(8, 1fr);
+    padding: 4rem 4rem;
+  }
+
+  .home-heading {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
+
+  .home-about-link {
+    grid-column: 6 / 8;
+    grid-row: 1 / 2;
+  }
+
+  .home-name {
+    display: flex;
+    grid-column: 1 / 9;
+    grid-row: 3 / 4;
+    align-self: end;
+  }
+}
+
+@media only screen and (min-width: 70rem) {
+  .home-name {
+    font-size: 11.2vw;
+  }
 }
