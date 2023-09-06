@@ -48,3 +48,23 @@ a:visited {
 li {
   list-style-type: none;
 }
+
+body::-webkit-scrollbar {
+  width: 0.7vw;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border: solid 3px transparent;
+  border-radius: 9999px;
+}
+
+.project-overlay::-webkit-scrollbar {
+  width: 0.7vw;
+}
+
+.project-overlay::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border: solid 3px transparent;
+  border-radius: 9999px;
+}
