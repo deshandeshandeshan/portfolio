@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
@@ -16,13 +16,25 @@ const Project = ({
 }) => {
   const [open, setOpen] = useState(false);
 
+  const removeScrollWhenOpen = () => {
+    if (open === true) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "scroll";
+    }
+  };
+
+  useEffect(() => {
+    removeScrollWhenOpen();
+  });
+
   return (
     <li className="project project-spacing">
       <h2 className="project-title project-padding">{name}</h2>
       <p className="project-year-completed project-padding">{yearCompleted}</p>
       <p className="project-description project-padding">{description}</p>
       <p
-        className="project-view-more project-padding"
+        className="project-view-more project-link project-padding"
         onClick={() => {
           setOpen(!open);
         }}
@@ -50,7 +62,7 @@ const Project = ({
         }}
       >
         <p
-          className="project-back-button"
+          className="project-back-button project-link"
           onClick={() => {
             setOpen(!open);
           }}

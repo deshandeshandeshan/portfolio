@@ -3,6 +3,10 @@
   padding: 0 2rem;
 }
 
+p.project-link:hover {
+  cursor: pointer;
+}
+
 .project-title,
 .project-overlay-title {
   font-size: 2rem;
