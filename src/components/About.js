@@ -34,6 +34,14 @@ const About = () => {
             LinkedIn
           </a>
         </li>
+        <li className="about-link github">
+          <a
+            className="link-color"
+            href="https://github.com/deshandeshandeshan"
+          >
+            GitHub
+          </a>
+        </li>
         <li className="about-link instagram">
           <a className="link-color" href="https://www.instagram.com/deshhan/">
             Instagram
