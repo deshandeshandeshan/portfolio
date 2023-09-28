@@ -8,8 +8,7 @@ const Projects = () => {
         return (
           <Project
             key={project.id}
-            image={project.images[0].url}
-            imageKey={project.images[0].id}
+            images={project.images}
             name={project.name}
             description={project.description}
             yearCompleted={project.yearCompleted}

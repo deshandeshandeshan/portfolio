@@ -1,11 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const Project = ({
-  image,
-  imageKey,
+  images,
   name,
   yearCompleted,
   description,
@@ -16,30 +15,44 @@ const Project = ({
 }) => {
   const [open, setOpen] = useState(false);
 
+  const removeScrollWhenOpen = () => {
+    if (open === true) {
+      document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
+    }
+  };
+
+  useEffect(() => {
+    removeScrollWhenOpen();
+  });
+
   return (
     <li className="project project-spacing">
       <h2 className="project-title project-padding">{name}</h2>
       <p className="project-year-completed project-padding">{yearCompleted}</p>
       <p className="project-description project-padding">{description}</p>
-      <p
-        className="project-view-more project-padding"
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        View more <FaLongArrowAltRight />
-      </p>
+      <div className="project-view-more">
+        <p
+          className="project-link project-padding icon-center"
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          View more <FaLongArrowAltRight />
+        </p>
+      </div>
       <img
         className="project-hero-image"
-        src={`${image}`}
+        src={`${images[0].url}`}
         alt={name}
-        key={imageKey}
+        key={images[0].key}
       />
       <img
         className="project-hero-image-2"
-        src={`${image}`}
+        src={`${images[2].url}`}
         alt={name}
-        key={imageKey}
+        key={images[2].key}
       />
       <div
         className={`project-overlay ${
@@ -50,7 +63,7 @@ const Project = ({
         }}
       >
         <p
-          className="project-back-button"
+          className="project-back-button project-link"
           onClick={() => {
             setOpen(!open);
           }}
@@ -69,13 +82,17 @@ const Project = ({
         <a className="project-overlay-visit project-padding" href={visitLink}>
           {visit} <FaLongArrowAltRight />
         </a>
-        <div className="project-overlay-images project-padding-top">
-          <img
-            className="project-overlay-image"
-            src={`${image}`}
-            alt={name}
-            key={imageKey}
-          />
+        <div className="project-overlay-images project-padding-top project-overlay-image-grid">
+          {images.map((projectImage) => {
+            return (
+              <img
+                className={`project-overlay-image ${projectImage.class}`}
+                src={`${projectImage.url}`}
+                alt={name}
+                key={projectImage.key}
+              />
+            );
+          })}
         </div>
       </div>
     </li>

@@ -3,6 +3,15 @@
   padding: 0 2rem;
 }
 
+p.project-link:hover {
+  cursor: pointer;
+}
+
+.icon-center {
+  display: flex;
+  align-items: center;
+}
+
 .project-title,
 .project-overlay-title {
   font-size: 2rem;
@@ -67,7 +76,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-title {
@@ -76,28 +85,28 @@
   }
 
   .project-year-completed {
-    grid-column: 4 / 6;
-    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
   }
 
   .project-description {
     grid-column: 1 / 5;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
   }
 
   .project-view-more {
     grid-column: 1 / 5;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
   }
 
   .project-hero-image {
     grid-column: 1 / 5;
-    grid-row: 4 / 5;
+    grid-row: 6 / 7;
   }
 
   .project-hero-image-2 {
     grid-column: 5 / 9;
-    grid-row: 4 / 5;
+    grid-row: 6 / 7;
   }
 
   /* project overlay code below */
@@ -107,7 +116,7 @@
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-back-button {
@@ -149,6 +158,45 @@
     grid-column: 1 / 9;
     grid-row: 6 / 7;
   }
+
+  /* project overlay image grid rules */
+
+  .project-overlay-image-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, auto);
+    gap: 2rem 1rem;
+  }
+
+  .overlay-image-grid-item-1 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+
+  .overlay-image-grid-item-2 {
+    grid-column: 5 / 9;
+    grid-row: 2 / 5;
+  }
+
+  .overlay-image-grid-item-3 {
+    grid-column: 1 / 9;
+    grid-row: 5 / 6;
+  }
+
+  .overlay-image-grid-item-4 {
+    grid-column: 1 / 5;
+    grid-row: 7 / 10;
+  }
+
+  .overlay-image-grid-item-5 {
+    grid-column: 5 / 9;
+    grid-row: 6 / 9;
+  }
+
+  .overlay-image-grid-item-6 {
+    grid-column: 1 / 9;
+    grid-row: 10 / 11;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
@@ -157,7 +205,7 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-title {
@@ -166,28 +214,28 @@
   }
 
   .project-year-completed {
-    grid-column: 4 / 6;
-    grid-row: 1 / 2;
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
   }
 
   .project-description {
     grid-column: 1 / 6;
-    grid-row: 2 / 3;
+    grid-row: 3 / 4;
   }
 
   .project-view-more {
     grid-column: 1 / 5;
-    grid-row: 3 / 4;
+    grid-row: 4 / 5;
   }
 
   .project-hero-image {
     grid-column: 1 / 7;
-    grid-row: 4 / 5;
+    grid-row: 6 / 7;
   }
 
   .project-hero-image-2 {
     grid-column: 7 / 13;
-    grid-row: 4 / 5;
+    grid-row: 6 / 7;
   }
 
   /* project overlay code below */
