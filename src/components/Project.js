@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import projects from "../projects-data/projectsdata";
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";

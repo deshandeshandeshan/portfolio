@@ -159,7 +159,7 @@ p.project-link:hover {
   .project-overlay-image-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(20, auto);
+    grid-template-rows: repeat(10, auto);
     gap: 2rem 1rem;
   }
 
