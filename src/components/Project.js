@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
+import projects from "../projects-data/projectsdata";
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 
 const Project = ({
-  image,
-  imageKey,
+  images,
   name,
   yearCompleted,
   description,
@@ -43,15 +43,15 @@ const Project = ({
       </p>
       <img
         className="project-hero-image"
-        src={`${image}`}
+        src={`${images[0].url}`}
         alt={name}
-        key={imageKey}
+        key={images[0].key}
       />
       <img
         className="project-hero-image-2"
-        src={`${image}`}
+        src={`${images[0].url}`}
         alt={name}
-        key={imageKey}
+        key={images[0].key}
       />
       <div
         className={`project-overlay ${
@@ -81,13 +81,17 @@ const Project = ({
         <a className="project-overlay-visit project-padding" href={visitLink}>
           {visit} <FaLongArrowAltRight />
         </a>
-        <div className="project-overlay-images project-padding-top">
-          <img
-            className="project-overlay-image"
-            src={`${image}`}
-            alt={name}
-            key={imageKey}
-          />
+        <div className="project-overlay-images project-padding-top project-overlay-image-grid">
+          {images.map((projectImage) => {
+            return (
+              <img
+                className={`project-overlay-image ${projectImage.class}`}
+                src={`${projectImage.url}`}
+                alt={name}
+                key={projectImage.key}
+              />
+            );
+          })}
         </div>
       </div>
     </li>

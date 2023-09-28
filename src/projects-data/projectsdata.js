@@ -13,6 +13,32 @@ const projects = [
       {
         id: 1,
         url: require("../images/NickyOlivier/nicky-olivier-website-mockup-1.png"),
+        class: "overlay-image-grid-item-1",
+      },
+      {
+        id: 2,
+        url: require("../images/NickyOlivier/Logo.png"),
+        class: "overlay-image-grid-item-2",
+      },
+      {
+        id: 3,
+        url: require("../images/NickyOlivier/Logo_with_background.png"),
+        class: "overlay-image-grid-item-3",
+      },
+      {
+        id: 4,
+        url: require("../images/NickyOlivier/Desktop_home.png"),
+        class: "overlay-image-grid-item-4",
+      },
+      {
+        id: 5,
+        url: require("../images/NickyOlivier/Desktop_about_and_gallery.png"),
+        class: "overlay-image-grid-item-5",
+      },
+      {
+        id: 6,
+        url: require("../images/NickyOlivier/Desktop_about_and_gallery.png"),
+        class: "overlay-image-grid-item-6",
       },
     ],
   },

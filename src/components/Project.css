@@ -153,6 +153,45 @@ p.project-link:hover {
     grid-column: 1 / 9;
     grid-row: 6 / 7;
   }
+
+  /* project overlay image grid rules */
+
+  .project-overlay-image-grid {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(20, auto);
+    gap: 2rem 1rem;
+  }
+
+  .overlay-image-grid-item-1 {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+  }
+
+  .overlay-image-grid-item-2 {
+    grid-column: 5 / 9;
+    grid-row: 2 / 5;
+  }
+
+  .overlay-image-grid-item-3 {
+    grid-column: 1 / 9;
+    grid-row: 5 / 6;
+  }
+
+  .overlay-image-grid-item-4 {
+    grid-column: 1 / 5;
+    grid-row: 7 / 10;
+  }
+
+  .overlay-image-grid-item-5 {
+    grid-column: 5 / 9;
+    grid-row: 6 / 9;
+  }
+
+  .overlay-image-grid-item-6 {
+    grid-column: 1 / 9;
+    grid-row: 10 / 11;
+  }
 }
 
 @media only screen and (min-width: 70rem) {
