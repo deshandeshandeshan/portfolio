@@ -32,14 +32,16 @@ const Project = ({
       <h2 className="project-title project-padding">{name}</h2>
       <p className="project-year-completed project-padding">{yearCompleted}</p>
       <p className="project-description project-padding">{description}</p>
-      <p
-        className="project-view-more project-link project-padding"
-        onClick={() => {
-          setOpen(!open);
-        }}
-      >
-        View more <FaLongArrowAltRight />
-      </p>
+      <div className="project-view-more">
+        <p
+          className="project-link project-padding icon-center"
+          onClick={() => {
+            setOpen(!open);
+          }}
+        >
+          View more <FaLongArrowAltRight />
+        </p>
+      </div>
       <img
         className="project-hero-image"
         src={`${images[0].url}`}
