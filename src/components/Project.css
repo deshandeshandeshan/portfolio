@@ -71,7 +71,7 @@ p.project-link:hover {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-title {
@@ -111,7 +111,7 @@ p.project-link:hover {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(6, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-back-button {
@@ -200,7 +200,7 @@ p.project-link:hover {
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(4, auto);
     gap: 0 1rem;
-    padding: 4rem 4rem;
+    padding: 2rem 2rem;
   }
 
   .project-title {

@@ -48,9 +48,9 @@ const Project = ({
       />
       <img
         className="project-hero-image-2"
-        src={`${images[0].url}`}
+        src={`${images[2].url}`}
         alt={name}
-        key={images[0].key}
+        key={images[2].key}
       />
       <div
         className={`project-overlay ${
