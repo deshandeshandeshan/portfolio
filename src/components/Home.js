@@ -10,7 +10,7 @@ const Home = () => {
         <h3 className="home-heading">Web Developer & Designer</h3>
         <Link to="/About" className="home-about-link">
           <h3 className="home-about icon-center">
-            About <FaLongArrowAltRight />
+            About&nbsp; <FaLongArrowAltRight />
           </h3>
         </Link>
         <h1 className="home-name">Deshan Mclachlan</h1>
