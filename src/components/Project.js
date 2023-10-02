@@ -31,7 +31,7 @@ const Project = ({
     <li className="project project-spacing">
       <h2 className="project-title project-padding">{name}</h2>
       <p className="project-year-completed project-padding">{yearCompleted}</p>
-      <p className="project-description project-padding">{description}</p>
+      <p className="project-role project-padding">Services: {role}</p>
       <div className="project-view-more">
         <p
           className="project-link project-padding icon-center"
@@ -39,7 +39,7 @@ const Project = ({
             setOpen(!open);
           }}
         >
-          View more <FaLongArrowAltRight />
+          View more&nbsp; <FaLongArrowAltRight />
         </p>
       </div>
       <img
@@ -58,17 +58,14 @@ const Project = ({
         className={`project-overlay ${
           open ? "project-overlay--active" : "project-overlay--hidden"
         }`}
-        style={{
-          opacity: open ? "1" : "0",
-        }}
       >
         <p
-          className="project-back-button project-link"
+          className="project-back-button project-link icon-center"
           onClick={() => {
             setOpen(!open);
           }}
         >
-          <FaLongArrowAltLeft /> Back
+          <FaLongArrowAltLeft /> &nbsp;Back
         </p>
         <h2 className="project-overlay-title project-padding">{name}</h2>
         <p className="project-overlay-year-completed project-padding">
@@ -79,8 +76,11 @@ const Project = ({
         </p>
         <p className="project-overlay-role project-padding">{role}</p>
         <p className="project-overlay-credits project-padding">{credits}</p>
-        <a className="project-overlay-visit project-padding" href={visitLink}>
-          {visit} <FaLongArrowAltRight />
+        <a
+          className="project-overlay-visit project-padding icon-center"
+          href={visitLink}
+        >
+          {visit}&nbsp; <FaLongArrowAltRight />
         </a>
         <div className="project-overlay-images project-padding-top project-overlay-image-grid">
           {images.map((projectImage) => {

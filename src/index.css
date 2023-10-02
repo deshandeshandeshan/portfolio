@@ -68,3 +68,26 @@ body::-webkit-scrollbar-thumb {
   border: solid 3px transparent;
   border-radius: 9999px;
 }
+
+/* Page transition rules */
+.slide-in {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0000ff;
+  transform-origin: right;
+  z-index: 10;
+}
+
+.slide-out {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #0000ff;
+  transform-origin: left;
+  z-index: 10;
+}

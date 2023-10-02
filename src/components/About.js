@@ -2,13 +2,14 @@ import { Link } from "react-router-dom";
 import AboutImage from "../images/about-image.jpg";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "./about.css";
+import transition from "./utilities/pageTransition";
 
 const About = () => {
   return (
     <main className="about">
       <Link to="/" className="about-selected-works-link">
-        <h3 className="about-selected-works">
-          Selected works <FaLongArrowAltRight />
+        <h3 className="about-selected-works icon-center">
+          Selected works&nbsp; <FaLongArrowAltRight />
         </h3>
       </Link>
       <h2 className="about-intro about-padding">
@@ -57,4 +58,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default transition(About);
