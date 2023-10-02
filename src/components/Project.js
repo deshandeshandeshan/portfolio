@@ -58,9 +58,6 @@ const Project = ({
         className={`project-overlay ${
           open ? "project-overlay--active" : "project-overlay--hidden"
         }`}
-        style={{
-          opacity: open ? "1" : "0",
-        }}
       >
         <p
           className="project-back-button project-link icon-center"

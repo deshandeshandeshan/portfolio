@@ -3,12 +3,21 @@
 }
 
 .home-projects {
+  position: relative;
   padding-top: 80rem;
 }
 
 .home-fixed {
   position: fixed;
-  z-index: -1;
+  z-index: 2;
+}
+
+.home-main--active {
+  z-index: 2;
+}
+
+.home-main--inactive {
+  z-index: 0;
 }
 
 .home-main-grid {
