@@ -2,6 +2,15 @@
   font-size: 16vw;
 }
 
+.home-projects {
+  padding-top: 80rem;
+}
+
+.home-fixed {
+  position: fixed;
+  z-index: -1;
+}
+
 .home-main-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -31,7 +31,7 @@ const Project = ({
     <li className="project project-spacing">
       <h2 className="project-title project-padding">{name}</h2>
       <p className="project-year-completed project-padding">{yearCompleted}</p>
-      <p className="project-description project-padding">{description}</p>
+      <p className="project-role project-padding">Services: {role}</p>
       <div className="project-view-more">
         <p
           className="project-link project-padding icon-center"
