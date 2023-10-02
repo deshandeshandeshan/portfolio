@@ -21,14 +21,14 @@ const Home = () => {
     startScroll: 0,
     endScroll: 1000,
     opacity: [1, 0],
-    translateY: [10, -40],
+    translateY: [0, -45],
   });
 
   const parallaxAbout = useParallax({
     startScroll: 0,
     endScroll: 1000,
     opacity: [1, 0],
-    translateY: [10, -40],
+    translateY: [0, -45],
   });
 
   const parallaxTitle = useParallax({
