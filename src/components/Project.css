@@ -18,13 +18,12 @@ p.project-link:hover {
   font-weight: 600;
 }
 
-.project-overlay-year-completed,
-.project-year-completed {
+small {
   color: #5a5a5a;
 }
 
 .project-padding {
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 .project-spacing {
@@ -85,11 +84,6 @@ p.project-link:hover {
     grid-row: 1 / 2;
   }
 
-  .project-year-completed {
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-  }
-
   .project-role {
     grid-column: 1 / 5;
     grid-row: 3 / 4;
@@ -127,11 +121,6 @@ p.project-link:hover {
 
   .project-overlay-title {
     grid-column: 1 / 5;
-    grid-row: 2 / 3;
-  }
-
-  .project-overlay-year-completed {
-    grid-column: 4 / 5;
     grid-row: 2 / 3;
   }
 
@@ -214,11 +203,6 @@ p.project-link:hover {
     grid-row: 1 / 2;
   }
 
-  .project-year-completed {
-    grid-column: 1 / 4;
-    grid-row: 2 / 3;
-  }
-
   .project-role {
     grid-column: 1 / 6;
     grid-row: 3 / 4;
@@ -254,11 +238,6 @@ p.project-link:hover {
 
   .project-overlay-title {
     grid-column: 1 / 6;
-    grid-row: 2 / 3;
-  }
-
-  .project-overlay-year-completed {
-    grid-column: 5 / 7;
     grid-row: 2 / 3;
   }
 

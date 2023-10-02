@@ -29,9 +29,10 @@ const Project = ({
 
   return (
     <li className="project project-spacing">
-      <h2 className="project-title project-padding">{name}</h2>
-      <p className="project-year-completed project-padding">{yearCompleted}</p>
-      <p className="project-role project-padding">Services: {role}</p>
+      <h2 className="project-title project-padding">
+        {name} <small>{yearCompleted}</small>
+      </h2>
+      <p className="project-role project-padding">{role}</p>
       <div className="project-view-more">
         <p
           className="project-link project-padding icon-center"
@@ -67,10 +68,9 @@ const Project = ({
         >
           <FaLongArrowAltLeft /> &nbsp;Back
         </p>
-        <h2 className="project-overlay-title project-padding">{name}</h2>
-        <p className="project-overlay-year-completed project-padding">
-          {yearCompleted}
-        </p>
+        <h2 className="project-overlay-title project-padding">
+          {name} <small>{yearCompleted}</small>
+        </h2>
         <p className="project-overlay-description project-padding">
           {description}
         </p>
