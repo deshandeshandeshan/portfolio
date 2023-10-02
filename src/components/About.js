@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import AboutImage from "../images/about-image.jpg";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "./about.css";
+import transition from "./utilities/pageTransition";
 
 const About = () => {
   return (
@@ -57,4 +58,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default transition(About);

@@ -4,6 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import "./home.css";
 import { useParallax } from "react-scroll-parallax";
 import { useState, useEffect } from "react";
+import transition from "./utilities/pageTransition";
 
 const Home = () => {
   const [homeMenuToBack, setHomeMenuToBack] = useState(true);
@@ -70,4 +71,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default transition(Home);
