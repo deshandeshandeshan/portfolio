@@ -13,9 +13,24 @@ h3 {
   font-weight: 500;
   font-style: normal;
   letter-spacing: 0.05rem;
-  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 2.8rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
 }
 
 p {
@@ -23,7 +38,7 @@ p {
   font-weight: 400;
   font-style: normal;
   letter-spacing: 0.05rem;
-  font-size: 18px;
+  font-size: 1rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -42,10 +57,14 @@ small {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.text-gray {
+  color: #5a5a5a;
+}
+
 a {
   font-family: neue-haas-grotesk-text, sans-serif;
   font-weight: 400;
-  font-size: 28px;
+  font-size: 1rem;
   text-decoration: none;
   color: #0000ff;
 }
@@ -100,4 +119,48 @@ body::-webkit-scrollbar-thumb {
   background-color: #0000ff;
   transform-origin: left;
   z-index: 10;
+}
+
+@media only screen and (min-width: 50rem) {
+  h1 {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 2.8rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+
+  p,
+  a {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 70rem) {
+  h1 {
+    font-size: 7rem;
+    line-height: 6rem;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+
+  p,
+  a {
+    font-size: 1.3rem;
+  }
 }

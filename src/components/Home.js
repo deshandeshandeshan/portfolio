@@ -38,6 +38,20 @@ const Home = () => {
     translateY: [0, 10],
   });
 
+  const parallaxSelectedWork = useParallax({
+    startScroll: 0,
+    endScroll: 1000,
+    opacity: [1, 0],
+    translateY: [0, 90],
+  });
+
+  const parallaxSelectedWorkSub = useParallax({
+    startScroll: 0,
+    endScroll: 1000,
+    opacity: [1, 0],
+    translateY: [0, 190],
+  });
+
   useEffect(() => {
     window.addEventListener("scroll", controlHome);
     return () => {
@@ -52,17 +66,26 @@ const Home = () => {
           homeMenuToBack ? "home-main--active" : "home-main--inactive"
         }`}
       >
-        <h3 ref={parallaxNav.ref} className="home-heading">
+        <p ref={parallaxNav.ref} className="home-heading text-gray">
           Web Developer & Designer
-        </h3>
+        </p>
         <Link to="/About" ref={parallaxAbout.ref} className="home-about-link">
-          <h3 className="home-about icon-center">
+          <p className="home-about icon-center">
             About&nbsp; <FaLongArrowAltRight />
-          </h3>
+          </p>
         </Link>
         <h1 ref={parallaxTitle.ref} className="home-name">
           Deshan Mclachlan
         </h1>
+        <h2 ref={parallaxSelectedWork.ref} className="home-selected-work">
+          Selected work
+        </h2>
+        <h3
+          ref={parallaxSelectedWorkSub.ref}
+          className="home-selected-work-sub text-gray"
+        >
+          23' - present
+        </h3>
       </div>
       <div className="home-projects">
         <Projects />
