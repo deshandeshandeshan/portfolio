@@ -12,12 +12,6 @@ p.project-link:hover {
   align-items: center;
 }
 
-.project-title,
-.project-overlay-title {
-  font-size: 2rem;
-  font-weight: 600;
-}
-
 small {
   color: #5a5a5a;
 }
@@ -43,10 +37,6 @@ small {
 
 .project-back-button {
   padding-bottom: 4rem;
-}
-
-.project-overlay-visit {
-  font-size: 20px;
 }
 
 .project-overlay-image {
