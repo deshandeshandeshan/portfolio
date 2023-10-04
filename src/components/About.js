@@ -14,19 +14,14 @@ const About = () => {
       </Link>
       <h2 className="about-intro about-padding">
         Kia ora! I’m Deshan, a Web Developer and Designer based in Wellington,
-        New Zealand. Please get in touch regarding any projects you would like
-        to discuss or collaboration opportunities.
+        New Zealand. Please get in touch regarding any projects or
+        collaborations you would like to discuss.
       </h2>
       <img
         className="about-potrait about-padding"
         src={AboutImage}
         alt="Deshan standing by the ocean"
       />
-      {/* <p className="about-more-info about-section-padding">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
-        Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-        mattis ligula consectetur, ultrices mauris.
-      </p> */}
       <ul className="about-education list-padding">
         <h3 className="list-header-padding">Education:</h3>
         <li className="list-item-padding">
@@ -93,6 +88,11 @@ const About = () => {
             href="https://github.com/deshandeshandeshan"
           >
             GitHub
+          </a>
+        </li>
+        <li className="about-link arena">
+          <a className="link-color" href="https://www.are.na/deshan-mclachlan">
+            Are.na
           </a>
         </li>
         <li className="about-link instagram">
