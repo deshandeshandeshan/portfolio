@@ -14,19 +14,66 @@ const About = () => {
       </Link>
       <h2 className="about-intro about-padding">
         Kia ora! I’m Deshan, a Web Developer and Designer based in Wellington,
-        New Zealand.
+        New Zealand. Please get in touch regarding any projects or
+        collaborations you would like to discuss.
       </h2>
       <img
         className="about-potrait about-padding"
         src={AboutImage}
         alt="Deshan standing by the ocean"
       />
-      <p className="about-more-info about-section-padding">
-        Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi.
-        Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla,
-        mattis ligula consectetur, ultrices mauris.
-      </p>
+      <ul className="about-education list-padding">
+        <h3 className="list-header-padding">Education:</h3>
+        <li className="list-item-padding">
+          <p>
+            2022 - 2023
+            <br />
+            Developers Institute
+            <br />
+            Distance education
+            <br />
+            Whangārei, New Zealand
+            <br />
+            Diploma in Web Development
+          </p>
+        </li>
+        <li className="list-item-padding">
+          <p>
+            2015 - 2019
+            <br />
+            Massey University
+            <br />
+            Wellington, New Zealand.
+            <br />
+            Bachelor of Design with Honours
+            <br />
+            Spatial Design.
+          </p>
+        </li>
+      </ul>
+      <ul className="about-experience list-padding">
+        <h3 className="list-header-padding">Experience:</h3>
+        <li className="list-item-padding">
+          <p>
+            2022 - current
+            <br />
+            Good as Gold
+            <br />
+            Retail assistant
+          </p>
+        </li>
+        <li className="list-item-padding">
+          <p>
+            2023 - current
+            <br />
+            Freelance
+            <br />
+            Web developer and Designer
+          </p>
+        </li>
+      </ul>
       <ul className="about-links-list">
+        <h3 className="about-link-header list-header-padding">Links:</h3>
         <li className="about-link linkedin">
           <a
             className="link-color"
@@ -43,14 +90,19 @@ const About = () => {
             GitHub
           </a>
         </li>
+        <li className="about-link arena">
+          <a className="link-color" href="https://www.are.na/deshan-mclachlan">
+            Are.na
+          </a>
+        </li>
         <li className="about-link instagram">
           <a className="link-color" href="https://www.instagram.com/deshhan/">
             Instagram
           </a>
         </li>
         <li className="about-link email">
-          <a className="link-color" href="mailto:deshan.mclachlan0@gmail.com">
-            hello@deshan.co.nz
+          <a className="link-color" href="mailto:hello@deshanmclachlan.com">
+            hello@deshanmclachlan.com
           </a>
         </li>
       </ul>

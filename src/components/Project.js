@@ -74,7 +74,7 @@ const Project = ({
         <p className="project-overlay-description project-padding">
           {description}
         </p>
-        <p className="project-overlay-role project-padding">{role}</p>
+        <p className="project-overlay-role project-padding">Services: {role}</p>
         <p className="project-overlay-credits project-padding">{credits}</p>
         <a
           className="project-overlay-visit project-padding icon-center"
