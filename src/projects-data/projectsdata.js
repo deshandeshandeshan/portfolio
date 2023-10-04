@@ -4,7 +4,7 @@ const projects = [
     name: "Nicky Olivier",
     yearCompleted: "2023",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. ",
+      "New logo and website for Nicky Olivier, an Aotearoa based wedding hair stylist who creates elegant and timeless wedding hairstyles to be remembered forever. ",
     role: "Brand identity and website development",
     credits: "",
     visit: "nickyolivier.com",
@@ -47,7 +47,7 @@ const projects = [
     name: "Cosmic Energy with Aimee",
     yearCompleted: "2023",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. ",
+      "Cosmic Energy harnesses spiritual services that elevate consciousness and help people connect with their inner selves. Together, we developed a new brand identity and website that attempts to connect with users authentically and spiritually. ",
     role: "Brand identity and website development",
     credits: "",
     visit: "cosmicenergywithaimee.com",
@@ -90,7 +90,7 @@ const projects = [
     name: "Poison Frog",
     yearCompleted: "2023",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. ",
+      "Website developed for Poison Frog, an Auckland based production company interested in capturing & presenting life in unconventional ways. ",
     role: "Website development",
     credits: "Credits: Aitken Hawkins (Design)",
     visit: "Coming soon",
