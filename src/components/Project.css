@@ -26,7 +26,8 @@ small {
 
 .project-back-button,
 .project-view-more {
-  color: #0000ff;
+  color: #ffa10b;
+  padding-bottom: 1rem;
 }
 
 /* project overlay code below */
@@ -197,7 +198,7 @@ small {
   }
 
   .project-title {
-    grid-column: 1 / 5;
+    grid-column: 1 / 7;
     grid-row: 1 / 2;
   }
 
@@ -262,5 +263,42 @@ small {
   .project-overlay-images {
     grid-column: 1 / 13;
     grid-row: 6 / 7;
+  }
+
+  .project-overlay-image-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(auto);
+    gap: 1rem 1rem;
+  }
+
+  .overlay-image-grid-item-1 {
+    grid-column: 1 / 7;
+    grid-row: 1 / 2;
+  }
+
+  .overlay-image-grid-item-2 {
+    grid-column: 7 / 13;
+    grid-row: 1 / 2;
+  }
+
+  .overlay-image-grid-item-3 {
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+  }
+
+  .overlay-image-grid-item-4 {
+    grid-column: 1 / 7;
+    grid-row: 3 / 4;
+  }
+
+  .overlay-image-grid-item-5 {
+    grid-column: 7 / 13;
+    grid-row: 3 / 4;
+  }
+
+  .overlay-image-grid-item-6 {
+    grid-column: 1 / 13;
+    grid-row: 4 / 5;
   }
 }

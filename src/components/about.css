@@ -20,7 +20,7 @@
 }
 
 a.link-color {
-  color: #0000ff;
+  color: #ffa10b;
 }
 
 .list-padding {
@@ -88,12 +88,12 @@ a.link-color {
   }
 
   .about-intro {
-    grid-column: 1 / 7;
+    grid-column: 1 / 8;
     grid-row: 2 / 3;
   }
 
   .about-potrait {
-    grid-column: 7 / 13;
+    grid-column: 8 / 13;
     grid-row: 2 / 5;
     object-fit: cover;
     height: 100%;
@@ -112,7 +112,7 @@ a.link-color {
   }
 
   .about-experience {
-    grid-column: 4 / 7;
+    grid-column: 4 / 8;
     grid-row: 3 / 4;
   }
 
