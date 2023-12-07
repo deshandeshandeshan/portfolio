@@ -3,8 +3,12 @@ import Projects from "./Projects";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import "./home.css";
 import { useParallax } from "react-scroll-parallax";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import transition from "./utilities/pageTransition";
+
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
+import D from "./D";
 
 const Home = () => {
   const [homeMenuToBack, setHomeMenuToBack] = useState(true);
@@ -74,6 +78,15 @@ const Home = () => {
             About&nbsp; <FaLongArrowAltRight />
           </p>
         </Link>
+        <Canvas className="threed-model">
+          <OrbitControls enableRotate={true} enableZoom={false} />
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[-2, 5, 2]} intensity={10} />
+          <directionalLight position={[2, -5, -2]} intensity={10} />
+          <Suspense fallback={null}>
+            <D />
+          </Suspense>
+        </Canvas>
         <h1 ref={parallaxTitle.ref} className="home-name">
           Deshan Mclachlan
         </h1>
