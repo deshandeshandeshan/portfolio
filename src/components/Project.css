@@ -64,7 +64,6 @@ small {
 .project-overlay--active {
   bottom: 0;
   transition-delay: 0s;
-  position: fixed;
 }
 
 @media only screen and (min-width: 50rem) {
