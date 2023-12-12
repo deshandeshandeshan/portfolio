@@ -38,6 +38,7 @@ small {
 
 .project-back-button {
   padding-bottom: 4rem;
+  padding-top: 2rem;
 }
 
 .project-overlay-image {
@@ -62,7 +63,8 @@ small {
 
 .project-overlay--active {
   bottom: 0;
-  transition-delay: 0.3s;
+  transition-delay: 0s;
+  position: fixed;
 }
 
 @media only screen and (min-width: 50rem) {

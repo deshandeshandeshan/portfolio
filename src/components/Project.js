@@ -18,9 +18,10 @@ const Project = ({
   const removeScrollWhenOpen = () => {
     if (open === true) {
       document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "scroll";
     }
+    //  else {
+    //   document.body.style.overflowY = "scroll";
+    // }
   };
 
   useEffect(() => {
