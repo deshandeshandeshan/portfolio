@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useToggle } from "@uidotdev/usehooks";
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
+import { useLockBodyScroll } from "@uidotdev/usehooks";
 
 const Project = ({
   images,
@@ -14,15 +16,19 @@ const Project = ({
   visitLink,
 }) => {
   const [open, setOpen] = useState(false);
+  const [locked, toggleLocked] = useToggle(false);
+
+  useLockBodyScroll(locked);
 
   const removeScrollWhenOpen = () => {
     if (open === true) {
       document.body.style.overflowY = "hidden";
+    } else {
+      document.body.style.overflowY = "scroll";
     }
-    //  else {
-    //   document.body.style.overflowY = "scroll";
-    // }
   };
+
+  console.log(locked);
 
   useEffect(() => {
     removeScrollWhenOpen();
@@ -39,6 +45,7 @@ const Project = ({
           className="project-link project-padding icon-center"
           onClick={() => {
             setOpen(!open);
+            toggleLocked(!locked);
           }}
         >
           View more&nbsp; <FaLongArrowAltRight />
@@ -65,6 +72,7 @@ const Project = ({
           className="project-back-button project-link icon-center"
           onClick={() => {
             setOpen(!open);
+            toggleLocked(!locked);
           }}
         >
           <FaLongArrowAltLeft /> &nbsp;Back
