@@ -29,10 +29,10 @@ const Project = ({
 
   return (
     <li className="project project-spacing">
-      <h2 className="project-title">
+      <h3 className="project-title">
         {name} <small>{yearCompleted}</small>
-      </h2>
-      <h3 className="project-role project-padding">{role}</h3>
+      </h3>
+      <p className="project-role project-padding">{role}</p>
       <div className="project-view-more">
         <p
           className="project-link project-padding icon-center"
