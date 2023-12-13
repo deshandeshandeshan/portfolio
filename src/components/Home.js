@@ -87,9 +87,9 @@ const Home = () => {
           23' - present
         </h3>
       </div>
-      <div className="home-projects">
+      <ul className="home-projects">
         <Projects />
-      </div>
+      </ul>
     </main>
   );
 };
