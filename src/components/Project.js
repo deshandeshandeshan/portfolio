@@ -1,16 +1,19 @@
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { useParams } from "react-router";
 
 const Project = ({
-  images,
   name,
+  images,
   yearCompleted,
   description,
   role,
   credits,
-  visit,
   visitLink,
+  visit,
 }) => {
+  const { id } = useParams();
+  console.log(id);
   return (
     <div>
       <p className="project-back-button project-link icon-center">
@@ -30,7 +33,7 @@ const Project = ({
       >
         {visit}&nbsp; <FaLongArrowAltRight />
       </a>
-      <div className="project-overlay-images project-padding-top project-overlay-image-grid">
+      {/* <div className="project-overlay-images project-padding-top project-overlay-image-grid">
         {images.map((projectImage) => {
           return (
             <img
@@ -41,7 +44,7 @@ const Project = ({
             />
           );
         })}
-      </div>
+      </div> */}
     </div>
   );
 };

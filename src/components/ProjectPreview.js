@@ -1,7 +1,8 @@
 import "./Project.css";
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const ProjectPreview = ({ images, name, yearCompleted, role }) => {
+const ProjectPreview = ({ name, id, images, yearCompleted, role }) => {
   return (
     <li className="project project-spacing">
       <h3 className="project-title">
@@ -9,9 +10,12 @@ const ProjectPreview = ({ images, name, yearCompleted, role }) => {
       </h3>
       <p className="project-role project-padding">{role}</p>
       <div className="project-view-more">
-        <p className="project-link project-padding icon-center">
+        <Link
+          to={`/project/${id}`}
+          className="project-link project-padding icon-center"
+        >
           View more&nbsp; <FaLongArrowAltRight />
-        </p>
+        </Link>
       </div>
       <img
         className="project-hero-image"
