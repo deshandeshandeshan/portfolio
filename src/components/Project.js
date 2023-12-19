@@ -3,29 +3,29 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { useParams } from "react-router";
 import { useEffect, useState } from "react";
 import projects from "../projects-data/projectsdata";
+import { Link } from "react-router-dom";
+import transition from "./utilities/pageTransition";
 
 const Project = () => {
-  const { id } = useParams();
-  console.log(id);
+  const [project, setProject] = useState([]);
 
-  const [project, setProject] = useState(projects);
+  const { id } = useParams();
+  const idParams = id;
 
   const filterProjects = (id) => {
-    const filteredProject = projects.find((project) => project.id !== id);
+    const filteredProject = projects.find((project) => project.id === id);
     setProject(filteredProject);
   };
 
   useEffect(() => {
-    filterProjects(id);
-  }, [id]);
-
-  console.log(project);
+    filterProjects(idParams);
+  }, [idParams]);
 
   return (
     <div>
-      <p className="project-back-button project-link icon-center">
+      <Link to="/" className="project-back-button project-link icon-center">
         <FaLongArrowAltLeft /> &nbsp;Back
-      </p>
+      </Link>
       <h2 className="project-overlay-title project-padding">
         {project.name} <small>{project.yearCompleted}</small>
       </h2>
@@ -45,19 +45,21 @@ const Project = () => {
         {project.visit}&nbsp; <FaLongArrowAltRight />
       </a>
       <div className="project-overlay-images project-padding-top project-overlay-image-grid">
-        {project.images.map((projectImage) => {
-          return (
-            <img
-              className={`project-overlay-image ${projectImage.class}`}
-              src={`${projectImage.url}`}
-              alt={project.name}
-              key={projectImage.key}
-            />
-          );
-        })}
+        {project &&
+          project.length !== 0 &&
+          project.images.map((projectImage) => {
+            return (
+              <img
+                className={`project-overlay-image ${projectImage.class}`}
+                src={`${projectImage.url}`}
+                alt={project.name}
+                key={projectImage.key}
+              />
+            );
+          })}
       </div>
     </div>
   );
 };
 
-export default Project;
+export default transition(Project);

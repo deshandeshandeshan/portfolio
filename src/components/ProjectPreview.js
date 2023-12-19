@@ -11,7 +11,7 @@ const ProjectPreview = ({ name, id, images, yearCompleted, role }) => {
       <p className="project-role project-padding">{role}</p>
       <div className="project-view-more">
         <Link
-          to={`/project/${id}`}
+          to={`/${id}`}
           className="project-link project-padding icon-center"
         >
           View more&nbsp; <FaLongArrowAltRight />
