@@ -10,7 +10,6 @@ const Project = () => {
   const [project, setProject] = useState([]);
 
   const { id } = useParams();
-  const idParams = id;
 
   const filterProjects = (id) => {
     const filteredProject = projects.find((project) => project.id === id);
@@ -18,8 +17,8 @@ const Project = () => {
   };
 
   useEffect(() => {
-    filterProjects(idParams);
-  }, [idParams]);
+    filterProjects(id);
+  }, [id]);
 
   return (
     <div>
