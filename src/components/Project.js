@@ -1,111 +1,64 @@
-import React, { useState, useEffect } from "react";
-import { useToggle } from "@uidotdev/usehooks";
-import "./Project.css";
-import { FaLongArrowAltRight } from "react-icons/fa";
 import { FaLongArrowAltLeft } from "react-icons/fa";
-import { useLockBodyScroll } from "@uidotdev/usehooks";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { useParams } from "react-router";
+import { useEffect, useState } from "react";
+import projects from "../projects-data/projectsdata";
+import { Link } from "react-router-dom";
+import transition from "./utilities/pageTransition";
 
-const Project = ({
-  images,
-  name,
-  yearCompleted,
-  description,
-  role,
-  credits,
-  visit,
-  visitLink,
-}) => {
-  const [open, setOpen] = useState(false);
-  const [locked, toggleLocked] = useToggle(false);
+const Project = () => {
+  const [project, setProject] = useState([]);
 
-  useLockBodyScroll(locked);
+  const { id } = useParams();
 
-  const removeScrollWhenOpen = () => {
-    if (open === true) {
-      document.body.style.overflowY = "hidden";
-    } else {
-      document.body.style.overflowY = "scroll";
-    }
+  const filterProjects = (id) => {
+    const filteredProject = projects.find((project) => project.id === id);
+    setProject(filteredProject);
   };
 
-  console.log(locked);
-
   useEffect(() => {
-    removeScrollWhenOpen();
-  });
+    filterProjects(id);
+  }, [id]);
 
   return (
-    <li className="project project-spacing">
-      <h3 className="project-title">
-        {name} <small>{yearCompleted}</small>
-      </h3>
-      <p className="project-role project-padding">{role}</p>
-      <div className="project-view-more">
-        <p
-          className="project-link project-padding icon-center"
-          onClick={() => {
-            setOpen(!open);
-            toggleLocked(!locked);
-          }}
-        >
-          View more&nbsp; <FaLongArrowAltRight />
-        </p>
-      </div>
-      <img
-        className="project-hero-image"
-        src={`${images[0].url}`}
-        alt={name}
-        key={images[0].key}
-      />
-      <img
-        className="project-hero-image-2"
-        src={`${images[2].url}`}
-        alt={name}
-        key={images[2].key}
-      />
-      <div
-        className={`project-overlay ${
-          open ? "project-overlay--active" : "project-overlay--hidden"
-        }`}
+    <div>
+      <Link to="/" className="project-back-button project-link icon-center">
+        <FaLongArrowAltLeft /> &nbsp;Back
+      </Link>
+      <h2 className="project-overlay-title project-padding">
+        {project.name} <small>{project.yearCompleted}</small>
+      </h2>
+      <p className="project-overlay-description project-padding">
+        {project.description}
+      </p>
+      <p className="project-overlay-role project-padding">
+        Services: {project.role}
+      </p>
+      <p className="project-overlay-credits project-padding">
+        {project.credits}
+      </p>
+      <a
+        className="project-overlay-visit project-padding icon-center"
+        href={project.visitLink}
       >
-        <p
-          className="project-back-button project-link icon-center"
-          onClick={() => {
-            setOpen(!open);
-            toggleLocked(!locked);
-          }}
-        >
-          <FaLongArrowAltLeft /> &nbsp;Back
-        </p>
-        <h2 className="project-overlay-title project-padding">
-          {name} <small>{yearCompleted}</small>
-        </h2>
-        <p className="project-overlay-description project-padding">
-          {description}
-        </p>
-        <p className="project-overlay-role project-padding">Services: {role}</p>
-        <p className="project-overlay-credits project-padding">{credits}</p>
-        <a
-          className="project-overlay-visit project-padding icon-center"
-          href={visitLink}
-        >
-          {visit}&nbsp; <FaLongArrowAltRight />
-        </a>
-        <div className="project-overlay-images project-padding-top project-overlay-image-grid">
-          {images.map((projectImage) => {
+        {project.visit}&nbsp; <FaLongArrowAltRight />
+      </a>
+      <div className="project-overlay-images project-padding-top project-overlay-image-grid">
+        {project &&
+          project.length !== 0 &&
+          project.images.map((projectImage) => {
             return (
               <img
                 className={`project-overlay-image ${projectImage.class}`}
                 src={`${projectImage.url}`}
-                alt={name}
+                alt={project.name}
                 key={projectImage.key}
               />
             );
           })}
-        </div>
       </div>
-    </li>
+    </div>
   );
 };
 
-export default Project;
+export default transition(Project);

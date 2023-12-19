@@ -1,6 +1,6 @@
 const projects = [
   {
-    id: 1,
+    id: "Nicky-Olivier",
     name: "Nicky Olivier",
     yearCompleted: "2023",
     description:
@@ -43,7 +43,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: "Cosmic-Energy-with-Aimee",
     name: "Cosmic Energy with Aimee",
     yearCompleted: "2023",
     description:
@@ -86,7 +86,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: "Poison-Frog",
     name: "Poison Frog",
     yearCompleted: "2023",
     description:

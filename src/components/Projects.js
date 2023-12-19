@@ -1,4 +1,4 @@
-import Project from "./Project";
+import ProjectPreview from "./ProjectPreview";
 import projects from "../projects-data/projectsdata";
 
 const Projects = () => {
@@ -6,8 +6,9 @@ const Projects = () => {
     <ul className="projects-list">
       {projects.map((project) => {
         return (
-          <Project
+          <ProjectPreview
             key={project.id}
+            id={project.id}
             images={project.images}
             name={project.name}
             description={project.description}
