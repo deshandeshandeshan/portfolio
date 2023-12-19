@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import projects from "../projects-data/projectsdata";
 import { Link } from "react-router-dom";
 import transition from "./utilities/pageTransition";
+import "./Project.css";
 
 const Project = () => {
   const [project, setProject] = useState([]);
@@ -21,7 +22,7 @@ const Project = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="project-overlay">
       <Link to="/" className="project-back-button project-link icon-center">
         <FaLongArrowAltLeft /> &nbsp;Back
       </Link>
